@@ -73,6 +73,12 @@ namespace LearningObjects {
         #endregion
 
         #region Member Methods
+        public string SayYourName() {
+            return String.Format("My name is {0}.",FirstName);
+        }
+        public string SaySomething() {
+            return "Something";
+        }
 
         #endregion
     }

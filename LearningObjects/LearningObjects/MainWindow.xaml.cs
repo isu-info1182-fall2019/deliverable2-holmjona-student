@@ -32,11 +32,19 @@ namespace LearningObjects {
             firstPerson.FirstName = "Fred";
             firstPerson.LastName = "Alex";
             tbPersonOutput.Text = firstPerson.FirstName + firstPerson.LastName;
-
-            
+            tbPersonOutput.Text = firstPerson.SaySomething();
+            tbPersonOutput.Text = firstPerson.SayYourName() + "\r\n" 
+                + secondPerson.SayYourName();
 
 
             firstPerson.DateOfBirth = new DateTime(2019, 12, 25);
+
+            Student stud = new Student();
+            stud.FirstName = "John";
+            stud.StudentID = 14335;
+            
+            tbPersonOutput.Text = stud.SayYourName();
+            tbPersonOutput.Text = firstPerson.SayYourName();
 
         }
     }
