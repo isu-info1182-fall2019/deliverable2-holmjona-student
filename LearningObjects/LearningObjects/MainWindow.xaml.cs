@@ -18,33 +18,67 @@ namespace LearningObjects {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        public MainWindow()
-        {
+        public MainWindow() {
             InitializeComponent();
         }
 
         private void BtnMakePerson_Click(object sender, RoutedEventArgs e) {
-            int a= 5;
+            int a = 5;
             Person firstPerson, secondPerson;
-            firstPerson = new Person();
-            secondPerson = new Person("Mary", "Muffit");
+            //firstPerson = new Person();
+            //secondPerson = new Person("Mary", "Muffit");
 
-            firstPerson.FirstName = "Fred";
-            firstPerson.LastName = "Alex";
-            tbPersonOutput.Text = firstPerson.FirstName + firstPerson.LastName;
-            tbPersonOutput.Text = firstPerson.SaySomething();
-            tbPersonOutput.Text = firstPerson.SayYourName() + "\r\n" 
-                + secondPerson.SayYourName();
+            //firstPerson.FirstName = "Fred";
+            //firstPerson.LastName = "Alex";
+            //tbPersonOutput.Text = firstPerson.FirstName + firstPerson.LastName;
+            //tbPersonOutput.Text = firstPerson.SaySomething();
+            //tbPersonOutput.Text = firstPerson.SayYourName() + "\r\n"  // A
+            //    + secondPerson.SayYourName();
 
 
-            firstPerson.DateOfBirth = new DateTime(2019, 12, 25);
+            //firstPerson.DateOfBirth = new DateTime(2019, 12, 25);
 
             Student stud = new Student();
             stud.FirstName = "John";
             stud.StudentID = 14335;
-            
-            tbPersonOutput.Text = stud.SayYourName();
-            tbPersonOutput.Text = firstPerson.SayYourName();
+
+            tbPersonOutput.Text = stud.SayYourName(); // B
+            //tbPersonOutput.Text = firstPerson.SayYourName(); // A
+
+
+            Student sOne = new Student();
+            sOne.FirstName = "Govinda";
+            Person sTwo = sOne;
+            Teacher tOne = new Teacher();
+            tOne.FirstName = "Mister";
+            Person tTwo = tOne;
+            Person tThree = sOne;
+          //  Student sThree = new Person();
+            //a  = sOne.StudentID;
+            //a  = sTwo.StudentID;
+
+            //tbPersonOutput.Text = sOne.SayYourName() + "\r\n" + sTwo.SayYourName()
+            //+ "\r\n" + tOne.SayYourName() + "\r\n" + tTwo.SayYourName();
+
+            tbPersonOutput.Text = sOne + "\r\n" + sTwo
+            + "\r\n" + tOne + "\r\n" + tTwo.ToString();
+
+
+            Student sFour = new Student();
+            sFour.FirstName = "Sushan";
+            Student sFive = sFour.CloneMe();
+            sFive.FirstName = "Meshari";
+
+            tbPersonOutput.Text = sFour + "\r\n" + sFive;
+
+
+            Teacher tFour = new Teacher();
+            tFour.FirstName = "Sushan";
+            Teacher tFive = tFour.CloneMeReally();
+            tFive.FirstName = "Meshari";
+
+            tbPersonOutput.Text = tFour + "\r\n" + tFive;
+
 
         }
     }

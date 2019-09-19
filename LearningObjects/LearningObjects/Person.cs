@@ -12,7 +12,7 @@ namespace LearningObjects {
     /// Prof. Holmes
     /// Description: This is a person that can exist
     /// </summary>
-    class Person {
+    abstract class  Person {
         #region Private Variables / Attributes / Class-Level Variables / Fields
         private string _FirstName = "";
         private string _MiddleName = "";
@@ -73,11 +73,16 @@ namespace LearningObjects {
         #endregion
 
         #region Member Methods
-        public string SayYourName() {
-            return String.Format("My name is {0}.",FirstName);
-        }
+        public abstract string SayYourName();
+        //    {
+        //    return String.Format("My name is {0}.",FirstName);
+        //}
         public string SaySomething() {
             return "Something";
+        }
+
+        public override string ToString() {
+            return "I am a Person named " + this.FirstName;
         }
 
         #endregion

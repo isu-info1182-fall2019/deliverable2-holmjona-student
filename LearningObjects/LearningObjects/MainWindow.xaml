@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearningObjects"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="183" Width="318.5">
     <Grid>
-        <Button x:Name="btnMakePerson" Content="Make Person" HorizontalAlignment="Left" Margin="133,101,0,0" VerticalAlignment="Top" Width="75" Click="BtnMakePerson_Click"/>
-        <TextBlock x:Name="tbPersonOutput" HorizontalAlignment="Left" Margin="267,103,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button x:Name="btnMakePerson" Content="Make Person" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" Width="75" Click="BtnMakePerson_Click"/>
+        <TextBlock x:Name="tbPersonOutput" HorizontalAlignment="Left" Margin="159,24,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
